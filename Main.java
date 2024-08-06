@@ -1,21 +1,14 @@
-package abstractClasses;
+package abstractDemo;
 
-public abstract class Main {
+public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		WomanGameCalculator womenGameCalculater = new WomanGameCalculator();
-		womenGameCalculater.calculate();
-		womenGameCalculater.gameOver();
+		CustomerManager customerManager = new CustomerManager();
+		customerManager.databaseManager = new SqlDatabaseManager();
+		customerManager.getCustomer();
+		customerManager.databaseManager = new MySqlDatabaseManager();
+		customerManager.getCustomer();
 
-		GameCalculator manGameCalculater = new ManGameCalculator();
-
-	/*	GameCalculator gameCalculator = new GameCalculator() {
-			@Override
-			public void calculate() {                             
-				
-			}
-		};*/
 	}
 
 }
